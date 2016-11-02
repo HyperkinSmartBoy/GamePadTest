@@ -33,7 +33,6 @@ public class MainActivity extends Activity implements InputManager.InputDeviceLi
 
     private TextView button_presses_view;
     private InputManager input_manager;
-    //private InputManager.InputDeviceListener input_device_listener;
     private Vector controller_ids;
     private int previous_button_press;
 
@@ -291,7 +290,6 @@ public class MainActivity extends Activity implements InputManager.InputDeviceLi
 
         // on button release clear out the text view for next button press
         previous_button_press = -1;
-        //button_presses_view.setText("");
     }
 
 
@@ -432,7 +430,6 @@ public class MainActivity extends Activity implements InputManager.InputDeviceLi
     onGenericMotionEvent(MotionEvent motion_event)
     {
         button_presses_view.setText("");
-        //button_presses_view.append("Motion Event Occurred!\n");
         processMotionEvent(motion_event);
         return super.onGenericMotionEvent(motion_event);
     }
